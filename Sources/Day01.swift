@@ -9,7 +9,7 @@ struct Day01: AdventDay {
     }
   }
   
-  func part1() -> Any {
+  func part1() -> Int {
     let (left, right) = values.reduce(into: ([Int](), [Int]())) { acc, pair in
       acc.0.append(pair[0])
       acc.1.append(pair[1])
@@ -17,7 +17,7 @@ struct Day01: AdventDay {
     return zip(left.sorted(), right.sorted()).map{ abs($0 - $1) }.reduce(0, +)
   }
   
-  func part2() -> Any {
+  func part2() -> Int {
     let counts = values.reduce(into: [Int: Int]()) { acc, pair in
       acc[pair[1], default: 0] += 1
     }

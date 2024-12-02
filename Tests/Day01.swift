@@ -11,12 +11,12 @@ struct Day01Tests {
     2 4
     5 2
     """
-
+  
   @Test func testPart1() async throws {
     let challenge = Day01(data: testData)
     #expect(String(describing: challenge.part1()) == "3")
   }
-
+  
   @Test func testPart2() async throws {
     let challenge = Day01(data: testData)
     #expect(String(describing: challenge.part2()) == "2")
